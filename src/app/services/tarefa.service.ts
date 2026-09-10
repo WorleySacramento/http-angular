@@ -26,4 +26,8 @@ export class TarefaService {
   editTarefa(id:number, tarefa: Tarefa): Observable<void> {
     return this.http.put<void>(`${this.baseUrl}/tarefas/${id}`, tarefa);
   }
+
+  deleteTarefa(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/tarefas/${id}`);
+  }
 }

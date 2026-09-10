@@ -13,9 +13,9 @@
       "concluida": true
     },
     {
-      "titulo": "Estudar programação Java",
+      "titulo": "Estudar programação",
       "descricao": "Revisar os conceitos de manipulação de arrays e objetos em JavaScript.",
-      "concluida": false,
+      "concluida": true,
       "id": "3"
     },
     {
@@ -29,12 +29,6 @@
       "titulo": "Limpar a casa",
       "descricao": "Aspirar os tapetes, passar pano no chão e organizar o escritório.",
       "concluida": false
-    },
-    {
-      "titulo": "Hildegard Hudson",
-      "descricao": "quae defetiscor cras",
-      "concluida": false,
-      "id": "hMwe0_NiEGc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

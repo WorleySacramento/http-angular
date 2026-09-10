@@ -19,4 +19,17 @@ constructor(private tarefaService: TarefaService) { }
       }
     });
   }
+
+  deletarTarefa(id: number) {
+    this.tarefaService.deleteTarefa(id).subscribe({
+      next: () => {
+        this.tarefaService.getTarefas().subscribe({
+          next: (tarefas) => {
+            this.tarefas = tarefas;
+            console.log('Tarefa deletada com sucesso. Lista atualizada:', this.tarefas);
+          }
+        });
+      }
+    });
+  }
 }

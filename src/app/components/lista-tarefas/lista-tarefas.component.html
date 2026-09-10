@@ -11,7 +11,7 @@
     <span *ngIf="!tarefa.concluida" class="badge bg-warning"> &CircleDot; Tarefa Pendente</span>
     <hr>
     <a routerLink="/tarefas/editar/{{tarefa.id}}" class="btn btn-primary btn-sm me-1">Editar Tarefa</a>
-    <button class="btn btn-danger btn-sm me-1 ">Apagar Tarefa</button>
+    <button (click)="deletarTarefa(tarefa.id!)" class="btn btn-danger btn-sm me-1 ">Apagar Tarefa</button>
   </div>
 </div>
 </div>
