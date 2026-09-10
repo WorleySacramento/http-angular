@@ -19,14 +19,11 @@ export class TarefaService {
     return this.http.post<void>(`${this.baseUrl}/tarefas`, tarefa);
   }
 
-
     getTarefa(id: number):Observable<Tarefa> {
     return this.http.get<Tarefa>(`${this.baseUrl}/tarefas/${id}`);
   }
 
-
-
-  // editTarefa(id:number): Observable<Tarefa> {
-  //   return this.http.put<Tarefa>(`${this.baseUrl}/tarefas/${id}`);
-  // }
+  editTarefa(id:number, tarefa: Tarefa): Observable<void> {
+    return this.http.put<void>(`${this.baseUrl}/tarefas/${id}`, tarefa);
+  }
 }

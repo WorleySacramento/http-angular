@@ -1,4 +1,4 @@
-<form [formGroup]="form"  class="container my-5">
+<form *ngIf="!notFound; else notFoundContainer " [formGroup]="form" (ngSubmit)="onSubmit()" class="container my-5">
     <h3>Editar Tarefa</h3>
   <div class="mb-3">
     <label for="titulo" class="form-label">Título</label>
@@ -14,3 +14,5 @@
   </div>
   <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Editar</button>
 </form>
+
+<ng-template #notFoundContainer> <h4>Tarefa nao encontrada</h4></ng-template>

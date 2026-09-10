@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Tarefa } from 'src/app/models/tarefa';
 import { TarefaService } from 'src/app/services/tarefa.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { TarefaService } from 'src/app/services/tarefa.service';
   styleUrls: ['./editar-tarefa.component.css']
 })
 export class EditarTarefaComponent implements OnInit {
+  notFound: boolean = false;
   id?: number;
   form: FormGroup = new FormGroup({
     titulo: new FormControl('', [Validators.required]),
@@ -18,11 +20,18 @@ export class EditarTarefaComponent implements OnInit {
 
   constructor(
     private tarefaService: TarefaService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   onSubmit() {
-
+    const tarefa: Tarefa = this.form.value, id = this.id;
+    this.tarefaService.editTarefa(id!, tarefa).subscribe({
+      next:() =>this.router.navigate(['/tarefas']), 
+      error:(err) =>{
+        alert('Erro ao editar a tarefa. Por favor, tente novamente.');
+      }
+    });
   }
 
   ngOnInit(): void {
@@ -32,6 +41,9 @@ export class EditarTarefaComponent implements OnInit {
         this.tarefaService.getTarefa(this.id).subscribe({
           next:(tarefa) =>{
             this.form.patchValue(tarefa);
+          },
+          error:(error) =>{
+            this.notFound = true;
           }
         })
       })

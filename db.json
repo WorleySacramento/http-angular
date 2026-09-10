@@ -13,10 +13,10 @@
       "concluida": true
     },
     {
-      "id": "3",
-      "titulo": "Estudar programação",
+      "titulo": "Estudar programação Java",
       "descricao": "Revisar os conceitos de manipulação de arrays e objetos em JavaScript.",
-      "concluida": false
+      "concluida": false,
+      "id": "3"
     },
     {
       "id": "4",
