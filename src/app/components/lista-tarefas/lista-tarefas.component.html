@@ -1,5 +1,9 @@
-<div class="card-group p-2">
-    <div *ngFor="let tarefa of tarefas" class="card " style="width: 18rem;">
+<a routerLink="/tarefas/nova" class="btn btn-primary mt-2">Nova Tarefa</a>
+
+<!-- <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner"> -->
+   <div class="card-group p-2 ">
+    <div *ngFor="let tarefa of tarefas" class="card  d-block" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{tarefa.titulo}}</h5>
     <p class="card-text">{{tarefa.descricao}}</p>
@@ -11,3 +15,13 @@
   </div>
 </div>
 </div>
+  <!-- <button class="carousel-control-prev btn btn-primary" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+

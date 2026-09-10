@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas.component';
 import { AddTarefaComponent } from './components/add-tarefa/add-tarefa.component';
 import { EditarTarefaComponent } from './components/editar-tarefa/editar-tarefa.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditarTarefaComponent } from './components/editar-tarefa/editar-tarefa.
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

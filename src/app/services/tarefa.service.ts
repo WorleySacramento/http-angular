@@ -14,4 +14,8 @@ export class TarefaService {
   getTarefas():Observable<Tarefa[]> {
     return this.http.get<Tarefa[]>(`${this.baseUrl}/tarefas`);
   }
+
+  addTarefa(tarefa: Tarefa): Observable<void> {
+    return this.http.post<void>(`${this.baseUrl}/tarefas`, tarefa);
+  }
 }

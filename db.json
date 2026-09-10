@@ -1,34 +1,41 @@
 {
   "tarefas": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Fazer compras do mês",
       "descricao": "Comprar arroz, feijão, vegetais e produtos de limpeza no supermercado.",
       "concluida": false
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "Pagar conta de energia",
       "descricao": "Pagar a fatura pelo aplicativo do banco antes do vencimento no dia 15.",
       "concluida": true
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "Estudar programação",
       "descricao": "Revisar os conceitos de manipulação de arrays e objetos em JavaScript.",
       "concluida": false
     },
     {
-      "id": 4,
+      "id": "4",
       "titulo": "Agendar dentista",
       "descricao": "Ligar para a clínica para marcar a limpeza de rotina semestral.",
       "concluida": false
     },
     {
-      "id": 5,
+      "id": "5",
       "titulo": "Limpar a casa",
       "descricao": "Aspirar os tapetes, passar pano no chão e organizar o escritório.",
       "concluida": false
+    },
+    {
+      "titulo": "Hildegard Hudson",
+      "descricao": "quae defetiscor cras",
+      "concluida": false,
+      "id": "hMwe0_NiEGc"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1,1 +1,16 @@
-<p>add-tarefa works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="container my-5">
+    <h3>Nova Tarefa</h3>
+  <div class="mb-3">
+    <label for="titulo" class="form-label">Título</label>
+    <input type="text" class="form-control" id="titulo" formControlName="titulo">
+  </div>
+  <div class="mb-3">
+    <label for="descricao" class="form-label">Descrição</label>
+    <input type="text" class="form-control" id="descricao" formControlName="descricao">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" formControlName="concluida">
+    <label class="form-check-label" for="concluida">Concluida?</label>
+  </div>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Adicionar</button>
+</form>
