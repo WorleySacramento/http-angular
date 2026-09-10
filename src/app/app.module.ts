@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas.component';
 import { AddTarefaComponent } from './components/add-tarefa/add-tarefa.component';
 import { EditarTarefaComponent } from './components/editar-tarefa/editar-tarefa.component';
@@ -18,7 +19,8 @@ import { EditarTarefaComponent } from './components/editar-tarefa/editar-tarefa.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

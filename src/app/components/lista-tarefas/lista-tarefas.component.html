@@ -1,1 +1,13 @@
-<p>lista-tarefas works!</p>
+<div class="card-group p-2">
+    <div *ngFor="let tarefa of tarefas" class="card " style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{tarefa.titulo}}</h5>
+    <p class="card-text">{{tarefa.descricao}}</p>
+    <span *ngIf="tarefa.concluida" class="badge bg-success"> &check; Tarefa Concluida</span>
+    <span *ngIf="!tarefa.concluida" class="badge bg-warning"> &CircleDot; Tarefa Pendente</span>
+    <hr>
+    <a routerLink="/tarefas/editar/{{tarefa.id}}" class="btn btn-primary btn-sm me-1">Editar Tarefa</a>
+    <button class="btn btn-danger btn-sm me-1 ">Apagar Tarefa</button>
+  </div>
+</div>
+</div>
